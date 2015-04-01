@@ -3,13 +3,13 @@
 
 
 /*form styles*/
-#multiform {
+#msform {
     width: 500px;
     margin: 50px auto;
     text-align: center;
     position: relative;
 }
-#multiform fieldset {
+#msform fieldset {
     background: white;
     border: 0 none;
     border-radius: 3px;
@@ -21,7 +21,7 @@
     margin: 0 10%;
 }
 /*inputs, buttons*/
-#multiform input, #multiform textarea {
+#msform input, #msform textarea {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -32,7 +32,7 @@
     color: #2C3E50;
     font-size: 13px;
 }
-#multiform .action-button {
+#msform .action-button {
     width: 100px;
     background: #27AE60;
     font-weight: bold;
@@ -43,10 +43,10 @@
     padding: 10px 5px;
     margin: 10px 5px;
 }
-#multiform .action-button:disabled {
+#msform .action-button:disabled {
     background: #9BCFB1;
 }
-#multiform .action-button:hover, #multiform .action-button:focus {
+#msform .action-button:hover, #msform .action-button:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
 
@@ -64,8 +64,8 @@
     margin: 0 0 20px;
 }
 
-/*multiform-pbar*/
-#multiform-pbar {
+/*msform-pbar*/
+#msform-pbar {
     margin-bottom: 30px;
     counter-reset: step;
     text-align: center;
@@ -75,14 +75,14 @@
     position: relative;
     left: -50%;
 }
-#multiform-pbar ul {
+#msform-pbar ul {
     margin: 0;
     padding: 0;
 
     position: relative;
     left: 50%;
 }
-#multiform-pbar li {
+#msform-pbar li {
     list-style-type: none;
     color: white;
     text-transform: uppercase;
@@ -94,9 +94,9 @@
 
     position: relative;
 }
-#multiform-pbar li:hover {
+#msform-pbar li:hover {
 }
-#multiform-pbar li:before {
+#msform-pbar li:before {
     content: counter(step);
     counter-increment: step;
     width: 18px;
@@ -109,8 +109,8 @@
     border: 1px solid white;
     margin: 0 auto 5px auto;
 }
-/*multiform-pbar connectors*/
-#multiform-pbar li:after {
+/*msform-pbar connectors*/
+#msform-pbar li:after {
     content: '';
     width: 100%;
     height: 2px;
@@ -120,25 +120,25 @@
     top: 9px;
     z-index: -1; /*put it behind the numbers*/
 }
-#multiform-pbar li:first-child:after {
+#msform-pbar li:first-child:after {
     content: none; /*connector not needed before the first step*/
 }
-#multiform-pbar li.active:before,  #multiform-pbar li.active:after,
-#multiform-pbar li.passed:before,  #multiform-pbar li.passed:after {
+#msform-pbar li.active:before,  #msform-pbar li.active:after,
+#msform-pbar li.passed:before,  #msform-pbar li.passed:after {
     background: #27AE60;
     color: white;
 }
-#multiform-pbar li.active:before {
+#msform-pbar li.active:before {
     border: 1px solid white;
 }
-#multiform-pbar li.passed:before {
+#msform-pbar li.passed:before {
     border: 1px solid #27AE60;
 }
-#multiform-pbar li.blocked:before,  #multiform-pbar li.blocked:after {
+#msform-pbar li.blocked:before,  #msform-pbar li.blocked:after {
 }
 
 /*loading bar*/
-#multiform #multiform-loading {
+#msform #msform-loading {
     color: silver;
     display: none;
     text-align: center;

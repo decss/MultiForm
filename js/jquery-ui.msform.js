@@ -1,9 +1,9 @@
 $(function(){ 
-    $.widget( "costum.multiform", {
+    $.widget( "costum.msform", {
         options: {
             navEl:          null,
-            loadingEl:      '#multiform #multiform-loading',
-            buttonsEl:      '#multiform #multiform-buttons',
+            loadingEl:      '#msform #msform-loading',
+            buttonsEl:      '#msform #msform-buttons',
             url:            null,
             wrapTag:        null,
             complete:       null,
@@ -14,7 +14,7 @@ $(function(){
             console.log('_create()');
 
             this.options   = $.extend({ }, this.options, {
-                _pageEl:     '#multiform #multiform-page',
+                _pageEl:     '#msform #msform-page',
                 _btnPrevEl:  '#msprev',
                 _btnNextEl:  '#msnext',
                 _btnSubmEl:  '#mssubm',
@@ -53,16 +53,16 @@ $(function(){
                     _this.options._config = config;
                     _this.options._page   = page;
                     progressBar           = _this._buildProgressBar();
-                    buttons               = _this._buildButtons();
+                    // buttons               = _this._buildButtons();
 
                     // Apply progressBar
                     if ( _this.options.navEl && progressBar ) {
                         _this._applyProgressbar( progressBar );
                     }
                     // Apply buttons
-                    if ( _this.options.buttonsEl && buttons ) {
-                        _this._applyButtons( buttons );
-                    }
+                    // if ( _this.options.buttonsEl && buttons ) {
+                    //     _this._applyButtons( buttons );
+                    // }
 
                     _this._update();
                 }
@@ -241,22 +241,6 @@ $(function(){
             console.log("_applyPage()");
             var pageHtml = page.html;
 
-            // var buttonsHtml = '';
-            // if ( this.options.step <= 1) {
-            //     buttonsHtml += this.options._config.buttons.next;
-            // } else if ( this.options.step >= page.stepsCount) {
-            //     buttonsHtml += this.options._config.buttons.prev;
-            //     buttonsHtml += this.options._config.buttons.subm;
-            // } else {
-            //     buttonsHtml += this.options._config.buttons.prev;
-            //     buttonsHtml += this.options._config.buttons.next;
-            // }
-            // if ( this.options.buttonsEl && $( this.options.buttonsEl ).length > 0 ) {
-            //     $( this.options.buttonsEl ).html( buttonsHtml );
-            // } else {
-            //     pageHtml += buttonsHtml;
-            // }
-
             if ( this.options.wrapTag ) {
                 pageHtml = '<' + this.options.wrapTag + '>' + pageHtml + '</' + this.options.wrapTag + '>';
             }
@@ -277,10 +261,10 @@ $(function(){
 $(function(){ 
 
 
-    var a = $('#multiform').multiform({
-        navEl:      '#multiform-pbar',
-        // buttonsEl:  '#multiform .mf-buttons',
-        loadingEl:  '#multiform #multiform-loading',
+    var a = $('#msform').msform({
+        navEl:      '#msform-pbar',
+        // buttonsEl:  '#msform .mf-buttons',
+        loadingEl:  '#msform #msform-loading',
         url:        'ajax.php',
         // wrapTag:    'div',
         loading:    true,
@@ -289,13 +273,13 @@ $(function(){
 
     console.log (a);
 
-    // $('#multiform').multiform({step: 2});
+    // $('#msform').msform({step: 2});
 
 
 
-    // console.log ( $('#multiform').data('costumMsform').options );
+    // console.log ( $('#msform').data('costumMsform').options );
 
-    // $('#multiform').multiform('method', {options: 123});
+    // $('#msform').msform('method', {options: 123});
 
 
 });
