@@ -19,7 +19,7 @@ body {
 }
 /*form styles*/
 #multiform {
-    width: 400px;
+    width: 500px;
     margin: 50px auto;
     text-align: center;
     position: relative;
@@ -66,6 +66,9 @@ body {
     padding: 10px 5px;
     margin: 10px 5px;
 }
+#multiform .action-button:disabled {
+    background: #9BCFB1;
+}
 #multiform .action-button:hover, #multiform .action-button:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
@@ -82,23 +85,28 @@ body {
     color: #666;
     margin-bottom: 20px;
 }
-/*mf-nav*/
-.mf-nav {
+
+
+/*multiform-pbar*/
+#multiform-pbar {
     margin-bottom: 30px;
     overflow: hidden;
     /*CSS counters to number the steps*/
     counter-reset: step;
 }
-.mf-nav li {
+#multiform-pbar li {
     list-style-type: none;
     color: white;
     text-transform: uppercase;
     font-size: 9px;
-    width: 33.33%;
+    width: 120px;
     float: left;
     position: relative;
+    /*cursor: pointer;*/
 }
-.mf-nav li:before {
+#multiform-pbar li:hover {
+}
+#multiform-pbar li:before {
     content: counter(step);
     counter-increment: step;
     width: 20px;
@@ -110,8 +118,8 @@ body {
     border-radius: 3px;
     margin: 0 auto 5px auto;
 }
-/*mf-nav connectors*/
-.mf-nav li:after {
+/*multiform-pbar connectors*/
+#multiform-pbar li:after {
     content: '';
     width: 100%;
     height: 2px;
@@ -121,19 +129,23 @@ body {
     top: 9px;
     z-index: -1; /*put it behind the numbers*/
 }
-.mf-nav li:first-child:after {
+#multiform-pbar li:first-child:after {
     /*connector not needed before the first step*/
     content: none; 
 }
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
-.mf-nav li.active:before,  .mf-nav li.active:after{
+#multiform-pbar li.active:before,  #multiform-pbar li.active:after {
     background: #27AE60;
     color: white;
 }
+#multiform-pbar li.blocked:before,  #multiform-pbar li.blocked:after {
+    /*background: gray;*/
+    /*color: white;*/
+}
 
 
-#multiform .mf-loading {
+#multiform #multiform-loading {
     color: silver;
     display: none;
     text-align: center;
