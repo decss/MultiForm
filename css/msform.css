@@ -56,6 +56,7 @@
     text-transform: uppercase;
     color: #2C3E50;
     margin: 0 0 10px;
+    font-weight: bold;
 }
 .fs-subtitle {
     font-weight: normal;
