@@ -75,8 +75,10 @@ $jsonData[config] = array(
 );
 
 
-
-for ($i = 1; $i <= rand(1, 9); $i++) { $br .= '<br>';}
+// Emulete variable container height
+for ($i = 1; $i <= rand(1, 9); $i++) {
+    $br .= '<br>';
+}
 $jsonData[page] = array(
     step  => $step,
     title => 'Step ' . $step,
@@ -85,7 +87,8 @@ $jsonData[page] = array(
            . '<h3 class="fs-subtitle">This is step ' . $step . '</h3>'
            . '<input type="text" name="email" placeholder="Email" />'
            . '<input type="text" name="pass" placeholder="Password" />'
-           . '<input type="text" name="cpass" placeholder="Confirm Password" />' . $br,
+           . '<input type="text" name="cpass" placeholder="Confirm Password" />' 
+           . $br,
 );
 
 
